@@ -17,7 +17,6 @@ def if_string_symmetric(some_string):
     return is_symmetric
 
 
-
 def get_the_string(in_data, x, y, delta_x, delta_y, length):
     string_array = n.empty(length, dtype='string')
     for k in range(length):
@@ -77,7 +76,6 @@ def iterate_over_whole_table():
     substring_len = len(name_to_look_for)
     search_array = n.array(list(name_to_look_for))
     word_counter = 0
-    print char_array
     for i in range(len(char_array)):
         for j in range(len(char_array[i])):
             if char_array[i,j] == search_array[0]:

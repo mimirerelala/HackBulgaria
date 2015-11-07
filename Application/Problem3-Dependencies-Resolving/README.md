@@ -6,7 +6,7 @@ You are implementing a package manager for the new hot language - Java.JS. This 
 
 There are 3rd party packages that can be installed. All packages are described in `all_packages.json`.
 
-Each package is described as a key-value unit, where the key is the name of the pacakge and the value is a list of packages that should be installed first as dependencies.
+Each package is described as a key-value unit, where the key is the name of the package and the value is a list of packages that should be installed first as dependencies.
 
 Here is an example `all_packages.json`
 
