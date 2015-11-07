@@ -68,7 +68,7 @@ def get_dependencies(package):
 
 #main action!!!
 
-#list ti hold packages to be installed
+#list to hold packages to be installed
 list_to_install = []
 
 #get all needed packages and dependencies recursively
