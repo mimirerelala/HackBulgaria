@@ -16,14 +16,14 @@ with open('dependencies.json') as dependencies:
 
 def check_if_installed(pack):
     """Return a boolean value to tell if a package is installed"""
-    if os.path.exists('installed_modules/'+ pack):
+    if os.path.exists('installed_modules' + os.path.sep + pack):
         return True
     else:
         return False
 
 
 def meet_dependencies(pack):
-    """Check if the current packaged has met its dependencies"""
+    """Check if the current package has met its dependencies"""
     does_meet = True
     for dep in all_packages_data[pack]:
         if (check_if_installed(dep)):
@@ -34,7 +34,7 @@ def meet_dependencies(pack):
 
 
 def install_package(pack):
-    """Install a packagem, by first checking if it is not already installed and if dependencies are met"""
+    """Install a package, by first checking if it is not already installed and if dependencies are met"""
     if check_if_installed(pack):
         print "Package " + pack + " already installed!"
         list_to_install.remove(pack)
@@ -43,7 +43,7 @@ def install_package(pack):
         return
     else:
         print "Installing package " + pack + " on the disK!"
-        os.mkdir('installed_modules/' + pack)
+        os.mkdir('installed_modules' + os.path.sep + pack)
         list_to_install.remove(pack)
     return
 
