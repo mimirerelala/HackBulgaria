@@ -1,0 +1,42 @@
+top
+htop
+
+mkdir -p  - create directory
+
+killall python
+kill -9 process_id
+(убий процеса каквото и да става)
+
+
+
+Done:
+
+Ex1/2
+
+mkdir -p A/C/E
+mkdir -p A/C/F/G
+mkdir -p A/D/H
+mkdir -p A/D/I
+subl panda
+cat > panda  + paste text
+
+
+Ex 3
+cp panda panda1 
+cp panda panda2
+mv panda panda3
+
+Ex 4
+touch penguin1 penguin2 penguin3
+
+Ex 5
+cd E
+cp -r ../F/G E
+
+
+
+
+
+
+
+
