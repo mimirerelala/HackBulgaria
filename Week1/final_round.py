@@ -158,7 +158,6 @@ def numbers_to_message(pressedSequence):
     result = ""
     next_letter_capital = False
     list_commands = group(pressedSequence)
-    print list_commands
     for i in range(len(list_commands)):
         if list_commands[i][0]==0:
             result += len(list_commands[i])*" "
@@ -169,7 +168,6 @@ def numbers_to_message(pressedSequence):
             for key in dict_sms:
                 if dict_sms[key] == list_commands[i]:
                     if next_letter_capital:
-                        print key
                         result += key.upper()
                         next_letter_capital = False
                     else:
