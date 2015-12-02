@@ -1,3 +1,5 @@
+import operator
+
 class Bill:
 
 	def __init__(self, amount):
@@ -65,8 +67,9 @@ class CashDesk:
 				inspect_result[number] +=1
 			else:
 				inspect_result[number] = 1
-		for key in inspect_result:
-			print("{}$ bill - {}".format(key, inspect_result[key]))
 
-
+		sorted_inspect_result = sorted(inspect_result.items(), key = operator.itemgetter(0))
+		for key in range(len(sorted_inspect_result)):
+			(note, amount) = sorted_inspect_result[key]
+			print("{}$ bills - {}".format(note, amount))
 
