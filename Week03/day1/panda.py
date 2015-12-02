@@ -17,6 +17,26 @@ class Panda:
     def get_weight(self):
         return self._weight
 
+#Magic methods:
+#double underscore
+
+    def __str__(self):
+        """
+        Overrides "to string" or what comes after print
+        """
+        return "I am {} and I am great!" % self._name
+
+    def __repr__(self):
+        return selt.__str__()
+
+    def __eq__(self, other):
+        return self._name == other._name
+
+    def __hash__(self):
+        return hash(self._name + str(self._age))
+
+
+
 
 ivo = Panda("Ivo", 22, 90)
 ivo.sleep()
@@ -24,7 +44,15 @@ ivo.eat(2)
 print(ivo._age, ivo._weight)
 
 
+ivo = Panda("Ivo", 22, 90)
+rado = Panda("Ivo", 22, 88)
+print(ivo == rado)
+print(hash(ivo))
+# if you redefince __eq__, you must redefine hash, hash breaks
+
+
 """
+
 Convention
 single underscore "_" - shouldnt change it private/protected?
 
