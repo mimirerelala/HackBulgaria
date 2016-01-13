@@ -1,49 +1,11 @@
 import operator
-
-
-class Bill:
-
-    def __init__(self, amount):
-        self._amount = amount
-
-    def __str__(self):
-        return "A {}$ bill".format(str(self._amount))
-
-    def __repr__(self):
-        return self.__str__()
-
-    def __int__(self):
-        return self._amount
-
-    def __eq__(self, other):
-        return self._amount == other._amount
-
-    def __hash__(self):
-        return hash(self._amount)
-
-
-class BillBatch(Bill):
-
-    def __init__(self, bill_list):
-        self._bills = bill_list
-        self._total = 0
-        for bill in bill_list:
-            self._total += bill._amount
-
-    def __len__(self):
-        return len(self._bills)
-
-    def total(self):
-        return self._total
-
-    def __getitem__(self, index):
-        return self._bills[index]
-
+from batchBill import BillBatch
 
 class CashDesk:
 
     def __init__(self):
         self.__desk = []
+        pass
 
     def take_money(self, money):
         if type(money) is Bill:
