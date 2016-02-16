@@ -29,8 +29,8 @@ def get_server_list(initial_path):
 				print(full_path, server_name )
 				counter += 1
 				print(counter, "/", all_links_count)
-		except (requests.exceptions.ConnectionError, KeyError, requests.exceptions.TooManyRedirects) as e:
-			pass
+		except (requests.exceptions.ConnectionError, KeyError, requests.exceptions.TooManyRedirects, requests.exceptions.ReadTimeout) as e:
+			counter+=1
 	with open('servers.txt', 'w') as outfile:
 		json.dump(result_servers, outfile)
 	print(result_servers)
