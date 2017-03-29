@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Login</title>
+    <style>
+    .error {
+        color: red;
+    }
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p> TO login please fill in these details:
+        </p>
+        <label for="username_key">
+            Username:
+            <input name='username_key' type="text">
+        </label>
+        <label for="password_value">
+            Password:
+            <input name='password_value' type="password">
+        </label>
+        <input type="submit" value='Login'>
+    </form>
+    <div class='error'> {{error}}</div>
+</body>
+
+</html>

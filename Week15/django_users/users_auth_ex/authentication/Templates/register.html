@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>REGISTER FORM</title>
+    <style>
+		.error{
+			color: red;
+		}
+    </style>
+</head>
+
+<body>
+    <form action="" method="POST">
+        {% csrf_token %}
+        <p> To REGISTER please fill in these details:
+        </p>
+        <label for="">
+            Username:
+            <input name='username_key' type="text">
+        </label>
+        <label for="">
+            Password:
+            <input name='password_value' type="password">
+        </label>
+        <input type="submit" value='Login'>
+    </form>
+
+    <div class = 'error'> {{error}}</div>
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+
+ |  
+ |  move_to_end(...)
+ |      Move an existing element to the end (or beginning if last==False).
+ |      
+ |      Raises KeyError if the element does not exist.
+ |      When last=True, acts like a fast version of self[key]=self.pop(key).
+ |  
+ |  pop(...)
+ |      od.pop(k[,d]) -> v, remove specified key and return the corresponding
+ |      value.  If key is not found, d is returned if given, otherwise KeyError
+ |      is raised.
+ |  
+ |  popitem(...)
+ |      od.popitem() -> (k, v), return and remove a (key, value) pair.
+ |      Pairs are returned in LIFO order if last is true or FIFO order if false.
+ |  
+ |  setdefault(...)
+ |      od.setdefault(k[,d]) -> od.get(k,d), also set od[k]=d if k not in od
+ |  
+ |  update(...)
+ |      D.update([E, ]**F) -> None.  Update D from dict/iterable E and F.
+ |      If E is present and has a .keys() method, then does:  for k in E: D[k] = E[k]
+ |      If E is present and lacks a .keys() method, then does:  for k, v in E: D[k] = v
+ |      In either case, this is followed by: for k in F:  D[k] = F[k]
+ |  
+ |  values(...)
+ |      D.values() -> an object providing a view on D's values
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data descriptors defined here:
+ |  
+ |  __dict__
+ |  
+ |  ----------------------------------------------------------------------
+ |  Data and other attributes defined here:
+ |  
+ |  __hash__ = None
+ |  
+ |  ----------------------------------------------------------------------
+ |  Methods inherited from builtins.dict:
+ |  
+ |  __contains__(self, key, /)
+ |      True if D has a key k, else False.
+ |  
+ |  __getattribute__(self, name, /)
+ |      Return getattr(self, name).
+ |  
+ |  __getitem__(...)
+ |      x.__getitem__(y) <==> x[y]
+ |  
+ |  __len__(self, /)
+ |      Return len(self).
+ |  
+ |  get(...)
+ |      D.get(k[,d]) -> D[k] if k in D, else d.  d defaults to None.
